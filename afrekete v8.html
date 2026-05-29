@@ -9,21 +9,23 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{width:100%;min-height:100vh;background:#0a0a14;color:#f0ede8;font-family:'Segoe UI',sans-serif;}
 .app{width:100%;min-height:100vh;display:flex;flex-direction:column;}
-.header{background:#0f0c1f;padding:14px 16px;border-bottom:1px solid #2a1f4a;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10;}
-.logo{width:42px;height:42px;border-radius:50%;background:#c8a84b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#0a0a14;flex-shrink:0;}
-.htext h1{font-size:15px;font-weight:600;color:#c8a84b;margin:0;}
+.header{background:#0f0c1f;padding:12px 16px;border-bottom:1px solid #2a1f4a;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10;}
+.logo{width:40px;height:40px;border-radius:50%;background:#c8a84b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#0a0a14;flex-shrink:0;}
+.htext h1{font-size:14px;font-weight:600;color:#c8a84b;margin:0;}
 .htext p{font-size:11px;color:#6b6080;margin:2px 0 0;}
-.nav{display:flex;background:#0a0816;border-bottom:1px solid #1a1438;position:sticky;top:70px;z-index:9;}
-.nb{flex:1;padding:12px 6px;border:none;background:none;color:#6b6080;font-size:11px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;border-bottom:2px solid transparent;}
+.nav{display:flex;background:#0a0816;border-bottom:1px solid #1a1438;position:sticky;top:64px;z-index:9;}
+.nb{flex:1;padding:10px 4px;border:none;background:none;color:#6b6080;font-size:10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;border-bottom:2px solid transparent;}
 .nb.on{color:#c8a84b;border-bottom-color:#c8a84b;}
+.nb .ico{font-size:20px;}
 .pg{display:none;padding:14px;}
 .pg.on{display:block;}
 .stitle{font-size:11px;font-weight:600;color:#6b6080;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
 .card{background:#13102a;border:0.5px solid #2a1f4a;border-radius:12px;padding:14px;margin-bottom:10px;}
 label{display:block;font-size:12px;color:#8a7fa0;margin-bottom:5px;margin-top:12px;}
 label.first{margin-top:0;}
-input[type=text],input[type=tel],input[type=number],input[type=date]{width:100%;background:#0a0816;border:1px solid #2a1f4a;border-radius:8px;padding:12px;color:#f0ede8;font-size:16px;outline:none;-webkit-appearance:none;appearance:none;}
-input:focus{border-color:#c8a84b;}
+input[type=text],input[type=tel],input[type=number],input[type=date],select{width:100%;background:#0a0816;border:1px solid #2a1f4a;border-radius:8px;padding:12px;color:#f0ede8;font-size:16px;outline:none;-webkit-appearance:none;appearance:none;}
+input:focus,select:focus{border-color:#c8a84b;}
+select option{background:#0a0816;}
 .r2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;}
 .sbtn{padding:13px 8px;border:2px solid #2a1f4a;border-radius:8px;background:#0a0816;color:#8a7fa0;font-size:14px;text-align:center;width:100%;cursor:pointer;}
 .sbtn.on{border-color:#c8a84b;color:#c8a84b;background:#160f2a;}
@@ -43,7 +45,9 @@ input:focus{border-color:#c8a84b;}
 .btn-g{width:100%;padding:15px;background:#c8a84b;color:#0a0a14;border:none;border-radius:10px;font-size:16px;font-weight:700;margin-top:12px;display:block;cursor:pointer;}
 .btn-g:disabled{opacity:.6;}
 .btn-s{padding:13px 8px;background:#160f2a;color:#c8a84b;border:2px solid #c8a84b;border-radius:10px;font-size:13px;font-weight:600;width:100%;cursor:pointer;}
+.btn-r{width:100%;padding:13px;background:#2a0a0a;color:#e87a7a;border:1px solid #6a1010;border-radius:10px;font-size:14px;font-weight:600;margin-top:8px;cursor:pointer;}
 .acard{background:#13102a;border:1px solid #2a1f4a;border-radius:12px;padding:13px;margin-bottom:9px;width:100%;text-align:left;cursor:pointer;display:block;}
+.acard:active{border-color:#c8a84b;}
 .aname{font-size:15px;font-weight:600;color:#f0ede8;}
 .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600;margin:2px 3px 0 0;}
 .b-salsa{background:#3d1a10;color:#e87a5a;}
@@ -51,12 +55,12 @@ input:focus{border-color:#c8a84b;}
 .b-kizomba{background:#1a103d;color:#8a5ae8;}
 .b-sede{background:#0a2510;color:#6ec85a;}
 .sbox{position:relative;margin-bottom:12px;}
-.sbox input{padding-left:42px;}
+.sbox input{padding-left:14px;}
 .pgrow{display:flex;justify-content:space-between;align-items:center;background:#0f0c20;border-radius:8px;padding:10px 12px;margin-bottom:6px;}
 .pgamt{font-size:15px;font-weight:600;color:#6ec85a;}
 .pgdt{font-size:11px;color:#8a7fa0;margin-top:2px;}
-.pbar{height:6px;background:#1a1438;border-radius:3px;overflow:hidden;margin-top:6px;}
-.pfill{height:100%;background:#c8a84b;border-radius:3px;}
+.pbar{height:8px;background:#1a1438;border-radius:4px;overflow:hidden;margin-top:6px;}
+.pfill{height:100%;background:#c8a84b;border-radius:4px;}
 .msg{padding:12px;border-radius:8px;font-size:13px;text-align:center;margin-top:10px;}
 .ok{background:#0a2010;border:1px solid #2a6a10;color:#6ec85a;}
 .er{background:#200a0a;border:1px solid #6a1010;color:#e87a7a;}
@@ -65,6 +69,16 @@ input:focus{border-color:#c8a84b;}
 @keyframes sp{to{transform:rotate(360deg)}}
 .divl{height:1px;background:#1a1438;margin:10px 0;}
 .empty{text-align:center;padding:36px 16px;color:#4a3f6a;font-size:15px;}
+/* saldo box */
+.saldo-box{border-radius:12px;padding:16px;margin-bottom:10px;text-align:center;}
+.saldo-ok{background:#0a2010;border:1px solid #2a6a10;}
+.saldo-no{background:#200a0a;border:1px solid #6a1010;}
+.saldo-num{font-size:28px;font-weight:700;margin-bottom:4px;}
+.saldo-lbl{font-size:12px;color:#8a7fa0;}
+/* corso row in scheda */
+.corso-row{background:#0f0c20;border-radius:8px;padding:10px 12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;}
+.corso-info{font-size:13px;font-weight:500;}
+.corso-sede{font-size:11px;color:#8a7fa0;margin-top:2px;}
 </style>
 </head>
 <body>
@@ -74,10 +88,18 @@ input:focus{border-color:#c8a84b;}
     <div class="htext"><h1>Family Afrekete</h1><p>Gestione Iscrizioni 2026-2027</p></div>
   </div>
   <div class="nav">
-    <button class="nb on" id="nb-isc">&#128100; Iscrivi</button>
-    <button class="nb" id="nb-pag">&#128176; Pagamenti</button>
+    <button class="nb on" id="nb-isc">
+      <span class="ico">&#128100;</span>Iscrivi
+    </button>
+    <button class="nb" id="nb-pag">
+      <span class="ico">&#128176;</span>Pagamenti
+    </button>
+    <button class="nb" id="nb-mod">
+      <span class="ico">&#9998;</span>Modifica
+    </button>
   </div>
 
+  <!-- ISCRIZIONE -->
   <div class="pg on" id="pg-isc">
     <div class="stitle">Nuova Iscrizione</div>
     <div class="card">
@@ -90,7 +112,6 @@ input:focus{border-color:#c8a84b;}
       <label>Numero cellulare</label>
       <input type="tel" id="f-cellulare" placeholder="+39 333 1234567">
     </div>
-
     <div class="card">
       <label class="first">Sede</label>
       <div class="r2" style="margin-top:6px">
@@ -98,12 +119,10 @@ input:focus{border-color:#c8a84b;}
         <button class="sbtn" id="s-Tezze" type="button">Tezze</button>
       </div>
     </div>
-
     <div class="card">
       <label class="first">Corsi e livelli</label>
       <div id="corsi-wrap"></div>
     </div>
-
     <div class="card">
       <div class="r2" style="margin-top:0">
         <div><label class="first">Totale corso (&euro;)</label><input type="number" id="f-totale" placeholder="0" inputmode="decimal"></div>
@@ -115,22 +134,26 @@ input:focus{border-color:#c8a84b;}
         <button class="tog" id="tog" type="button"><div class="tok"></div></button>
       </div>
     </div>
-
     <div class="card">
       <div class="stitle" style="margin-bottom:8px">Messaggio di benvenuto</div>
       <div class="r2" style="margin-top:0">
-        <button class="btn-s" id="btn-wa" type="button">WhatsApp</button>
-        <button class="btn-s" id="btn-sms" type="button">SMS</button>
+        <button class="btn-s" id="btn-wa" type="button">&#128196; WhatsApp</button>
+        <button class="btn-s" id="btn-sms" type="button">&#128172; SMS</button>
       </div>
     </div>
-
     <button class="btn-g" id="btn-salva" type="button">Salva iscrizione su Drive</button>
     <div id="msg-isc" style="display:none" class="msg"></div>
     <div style="height:30px"></div>
   </div>
 
+  <!-- PAGAMENTI -->
   <div class="pg" id="pg-pag">
     <div id="pag-content"></div>
+  </div>
+
+  <!-- MODIFICA -->
+  <div class="pg" id="pg-mod">
+    <div id="mod-content"></div>
   </div>
 </div>
 
@@ -140,117 +163,11 @@ var CORSI = ['Salsa','Bachata','Kizomba'];
 var LIV = ['Base','Intermedio','Avanzato'];
 var WMSG = "Ciao benvenuta/o nella family AFREKETE. È molto importante che memorizzi questo numero della scuola sul tuo cellulare. Il numero è 3288507507 Per essere sempre informati chiedi l'amicizia su FACEBOOK alla scuola su https://www.facebook.com/afreketekiz/ Oppure trovi la scuola su INSTAGRAM qui https://www.instagram.com/escuelaafrekete/ I tuoi maestri Laura e Fabio sono sicuri che ti troverai bene con noi e per qualsiasi cosa scrivici senza problemi. A presto 😊";
 
-var sede = '';
-var turnista = false;
-var corsiSel = {};
+var sede = '', turnista = false, corsiSel = {};
 var allievi = [];
-var selAllievo = null;
-var searchVal = '';
+var pagAllievo = null, modAllievo = null;
+var pagSearch = '', modSearch = '';
 var nuovoPagData = '';
-
-function tap(el, fn) {
-  el.addEventListener('click', fn);
-}
-
-function init() {
-  document.getElementById('f-data').value = new Date().toISOString().split('T')[0];
-  nuovoPagData = new Date().toISOString().split('T')[0];
-
-  tap(document.getElementById('nb-isc'), function() { switchTab('isc'); });
-  tap(document.getElementById('nb-pag'), function() { switchTab('pag'); });
-  tap(document.getElementById('s-Creazzo'), function() { setSede('Creazzo'); });
-  tap(document.getElementById('s-Tezze'),   function() { setSede('Tezze'); });
-  tap(document.getElementById('tog'),       function() { toggleTurnista(); });
-  tap(document.getElementById('btn-salva'), function() { salvaIscrizione(); });
-  tap(document.getElementById('btn-wa'),    function() { apriWA(); });
-  tap(document.getElementById('btn-sms'),   function() { apriSMS(); });
-
-  buildCorsi();
-}
-
-function buildCorsi() {
-  var w = document.getElementById('corsi-wrap');
-  w.innerHTML = '';
-  CORSI.forEach(function(c) {
-    var sel = !!corsiSel[c];
-    var lv = corsiSel[c] ? corsiSel[c].livello : '';
-
-    var blk = document.createElement('div');
-    blk.className = 'cblock';
-
-    var head = document.createElement('button');
-    head.type = 'button';
-    head.className = 'chead';
-    head.innerHTML = '<span class="cname">' + c + '</span>'
-      + '<div class="cbox' + (sel ? ' on' : '') + '" id="cbox-' + c + '">' + (sel ? '✓' : '') + '</div>';
-    head.addEventListener('click', (function(corso) {
-      return function() { toggleCorso(corso); };
-    })(c));
-    blk.appendChild(head);
-
-    var livDiv = document.createElement('div');
-    livDiv.className = 'livelli';
-    livDiv.id = 'liv-' + c;
-    livDiv.style.display = sel ? 'flex' : 'none';
-    LIV.forEach(function(l) {
-      var lb = document.createElement('button');
-      lb.type = 'button';
-      lb.id = 'lb-' + c + '-' + l.slice(0,3);
-      lb.className = 'lbtn' + (lv === l ? ' on' : '');
-      lb.textContent = l;
-      lb.addEventListener('click', (function(corso, livello) {
-        return function() { setLiv(corso, livello); };
-      })(c, l));
-      livDiv.appendChild(lb);
-    });
-    blk.appendChild(livDiv);
-    w.appendChild(blk);
-  });
-}
-
-function toggleCorso(c) {
-  if (corsiSel[c]) {
-    delete corsiSel[c];
-  } else {
-    corsiSel[c] = { livello: '' };
-  }
-  var sel = !!corsiSel[c];
-  var box = document.getElementById('cbox-' + c);
-  var liv = document.getElementById('liv-' + c);
-  if (box) { box.className = 'cbox' + (sel ? ' on' : ''); box.textContent = sel ? '✓' : ''; }
-  if (liv) liv.style.display = sel ? 'flex' : 'none';
-}
-
-function setLiv(c, l) {
-  if (!corsiSel[c]) corsiSel[c] = { livello: '' };
-  corsiSel[c].livello = l;
-  LIV.forEach(function(ll) {
-    var b = document.getElementById('lb-' + c + '-' + ll.slice(0,3));
-    if (b) b.className = 'lbtn' + (ll === l ? ' on' : '');
-  });
-}
-
-function setSede(s) {
-  sede = s;
-  document.getElementById('s-Creazzo').className = 'sbtn' + (s === 'Creazzo' ? ' on' : '');
-  document.getElementById('s-Tezze').className   = 'sbtn' + (s === 'Tezze'   ? ' on' : '');
-}
-
-function toggleTurnista() {
-  turnista = !turnista;
-  document.getElementById('tog').className = 'tog' + (turnista ? ' on' : '');
-}
-
-function switchTab(t) {
-  document.querySelectorAll('.pg').forEach(function(p) { p.classList.remove('on'); });
-  document.querySelectorAll('.nb').forEach(function(b) { b.classList.remove('on'); });
-  document.getElementById('pg-' + t).classList.add('on');
-  document.getElementById('nb-' + t).classList.add('on');
-  if (t === 'pag') renderPag();
-}
-
-function g(id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; }
-function showMsg(id, cls, txt) { var e = document.getElementById(id); if(e){e.className='msg '+cls;e.textContent=txt;e.style.display='block';} }
 
 function callGAS(params) {
   var qs = Object.keys(params).map(function(k) {
@@ -259,163 +176,307 @@ function callGAS(params) {
   return fetch(GASURL + '?' + qs + '&cb=' + Date.now()).then(function(r) { return r.json(); });
 }
 
+function g(id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; }
+function showMsg(id, cls, txt) { var e = document.getElementById(id); if(e){e.className='msg '+cls;e.textContent=txt;e.style.display='block';} }
+
+/* ===================== INIT ===================== */
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('f-data').value = new Date().toISOString().split('T')[0];
+  nuovoPagData = new Date().toISOString().split('T')[0];
+
+  document.getElementById('nb-isc').addEventListener('click', function(){ switchTab('isc'); });
+  document.getElementById('nb-pag').addEventListener('click', function(){ switchTab('pag'); });
+  document.getElementById('nb-mod').addEventListener('click', function(){ switchTab('mod'); });
+
+  document.getElementById('s-Creazzo').addEventListener('click', function(){ setSede('Creazzo'); });
+  document.getElementById('s-Tezze').addEventListener('click',   function(){ setSede('Tezze'); });
+  document.getElementById('tog').addEventListener('click',       function(){ toggleTurnista(); });
+  document.getElementById('btn-salva').addEventListener('click', function(){ salvaIscrizione(); });
+  document.getElementById('btn-wa').addEventListener('click',    function(){ apriWA(); });
+  document.getElementById('btn-sms').addEventListener('click',   function(){ apriSMS(); });
+
+  buildCorsi();
+});
+
+function switchTab(t) {
+  document.querySelectorAll('.pg').forEach(function(p){ p.classList.remove('on'); });
+  document.querySelectorAll('.nb').forEach(function(b){ b.classList.remove('on'); });
+  document.getElementById('pg-'+t).classList.add('on');
+  document.getElementById('nb-'+t).classList.add('on');
+  if (t === 'pag') renderPag();
+  if (t === 'mod') renderMod();
+}
+
+/* ===================== ISCRIZIONE ===================== */
+function buildCorsi() {
+  var w = document.getElementById('corsi-wrap');
+  w.innerHTML = '';
+  CORSI.forEach(function(c) {
+    var sel = !!corsiSel[c];
+    var lv = corsiSel[c] ? corsiSel[c].livello : '';
+    var blk = document.createElement('div');
+    blk.className = 'cblock';
+    var head = document.createElement('button');
+    head.type = 'button';
+    head.className = 'chead';
+    head.innerHTML = '<span class="cname">'+c+'</span><div class="cbox'+(sel?' on':'')+'" id="cbox-'+c+'">'+(sel?'✓':'')+'</div>';
+    head.addEventListener('click', (function(corso){ return function(){ toggleCorso(corso); }; })(c));
+    blk.appendChild(head);
+    var livDiv = document.createElement('div');
+    livDiv.className = 'livelli';
+    livDiv.id = 'liv-'+c;
+    livDiv.style.display = sel ? 'flex' : 'none';
+    LIV.forEach(function(l) {
+      var lb = document.createElement('button');
+      lb.type = 'button';
+      lb.id = 'lb-'+c+'-'+l.slice(0,3);
+      lb.className = 'lbtn'+(lv===l?' on':'');
+      lb.textContent = l;
+      lb.addEventListener('click', (function(corso,livello){ return function(){ setLiv(corso,livello); }; })(c,l));
+      livDiv.appendChild(lb);
+    });
+    blk.appendChild(livDiv);
+    w.appendChild(blk);
+  });
+}
+
+function toggleCorso(c) {
+  if (corsiSel[c]) delete corsiSel[c]; else corsiSel[c] = {livello:''};
+  var sel = !!corsiSel[c];
+  var box = document.getElementById('cbox-'+c);
+  var liv = document.getElementById('liv-'+c);
+  if (box) { box.className='cbox'+(sel?' on':''); box.textContent=sel?'✓':''; }
+  if (liv) liv.style.display = sel?'flex':'none';
+}
+
+function setLiv(c,l) {
+  if (!corsiSel[c]) corsiSel[c]={livello:''};
+  corsiSel[c].livello = l;
+  LIV.forEach(function(ll){
+    var b=document.getElementById('lb-'+c+'-'+ll.slice(0,3));
+    if(b) b.className='lbtn'+(ll===l?' on':'');
+  });
+}
+
+function setSede(s) {
+  sede = s;
+  document.getElementById('s-Creazzo').className='sbtn'+(s==='Creazzo'?' on':'');
+  document.getElementById('s-Tezze').className  ='sbtn'+(s==='Tezze'?' on':'');
+}
+
+function toggleTurnista() {
+  turnista = !turnista;
+  document.getElementById('tog').className='tog'+(turnista?' on':'');
+}
+
 function validate() {
-  if (!g('f-cognome') || !g('f-nome')) return 'Inserisci cognome e nome';
+  if (!g('f-cognome')||!g('f-nome')) return 'Inserisci cognome e nome';
   if (!g('f-cellulare')) return 'Inserisci il numero di cellulare';
   if (!sede) return 'Seleziona la sede';
   if (!Object.keys(corsiSel).length) return 'Seleziona almeno un corso';
-  var err = null;
-  Object.keys(corsiSel).forEach(function(c) { if (!corsiSel[c].livello) err = 'Seleziona il livello per ' + c; });
+  var err=null;
+  Object.keys(corsiSel).forEach(function(c){ if(!corsiSel[c].livello) err='Seleziona il livello per '+c; });
   return err;
 }
 
 function salvaIscrizione() {
   var err = validate();
-  if (err) { showMsg('msg-isc', 'er', err); return; }
+  if (err) { showMsg('msg-isc','er',err); return; }
   var btn = document.getElementById('btn-salva');
-  btn.disabled = true; btn.innerHTML = '<span class="spin"></span>Salvataggio...';
-  document.getElementById('msg-isc').style.display = 'none';
-  var corsiArr = Object.keys(corsiSel).map(function(c) { return { nome: c, livello: corsiSel[c].livello }; });
+  btn.disabled=true; btn.innerHTML='<span class="spin"></span>Salvataggio...';
+  document.getElementById('msg-isc').style.display='none';
+  var corsiArr = Object.keys(corsiSel).map(function(c){ return {nome:c,livello:corsiSel[c].livello}; });
   callGAS({
-    action: 'salvaIscrizione',
-    data: g('f-data'), cognome: g('f-cognome'), nome: g('f-nome'),
-    cellulare: g('f-cellulare'), sede: sede, turnista: String(turnista),
-    totaleCoro: g('f-totale') || '0', acconto: g('f-acconto') || '0',
-    corsi: JSON.stringify(corsiArr)
-  }).then(function(res) {
-    if (res.ok) {
-      showMsg('msg-isc', 'ok', '✓ Allievo salvato su Google Drive!');
-      corsiSel = {}; sede = ''; turnista = false;
-      ['f-cognome','f-nome','f-cellulare','f-totale','f-acconto'].forEach(function(id) {
-        var e = document.getElementById(id); if(e) e.value = '';
+    action:'salvaIscrizione', data:g('f-data'), cognome:g('f-cognome'), nome:g('f-nome'),
+    cellulare:g('f-cellulare'), sede:sede, turnista:String(turnista),
+    totaleCoro:g('f-totale')||'0', acconto:g('f-acconto')||'0',
+    corsi:JSON.stringify(corsiArr)
+  }).then(function(res){
+    if(res.ok){
+      showMsg('msg-isc','ok','✓ Allievo salvato su Google Drive!');
+      corsiSel={}; sede=''; turnista=false;
+      ['f-cognome','f-nome','f-cellulare','f-totale','f-acconto'].forEach(function(id){
+        var e=document.getElementById(id); if(e) e.value='';
       });
-      document.getElementById('f-data').value = new Date().toISOString().split('T')[0];
-      document.getElementById('tog').className = 'tog';
-      document.getElementById('s-Creazzo').className = 'sbtn';
-      document.getElementById('s-Tezze').className = 'sbtn';
+      document.getElementById('f-data').value=new Date().toISOString().split('T')[0];
+      document.getElementById('tog').className='tog';
+      document.getElementById('s-Creazzo').className='sbtn';
+      document.getElementById('s-Tezze').className='sbtn';
       buildCorsi();
-    } else {
-      showMsg('msg-isc', 'er', 'Errore: ' + (res.msg || 'riprova'));
-    }
-    btn.disabled = false; btn.innerHTML = 'Salva iscrizione su Drive';
-  }).catch(function() {
-    showMsg('msg-isc', 'er', 'Errore di connessione. Riprova.');
-    btn.disabled = false; btn.innerHTML = 'Salva iscrizione su Drive';
+      allievi=[];
+    } else { showMsg('msg-isc','er','Errore: '+(res.msg||'riprova')); }
+    btn.disabled=false; btn.innerHTML='Salva iscrizione su Drive';
+  }).catch(function(){
+    showMsg('msg-isc','er','Errore di connessione. Riprova.');
+    btn.disabled=false; btn.innerHTML='Salva iscrizione su Drive';
   });
 }
 
 function apriWA() {
-  var n = g('f-cellulare').replace(/\D/g, '');
-  if (!n) return;
-  if (n.indexOf('39') !== 0) n = '39' + n;
-  window.open('https://wa.me/' + n + '?text=' + encodeURIComponent(WMSG), '_blank');
+  var n=g('f-cellulare').replace(/\D/g,'');
+  if(!n) return;
+  if(n.indexOf('39')!==0) n='39'+n;
+  window.open('https://wa.me/'+n+'?text='+encodeURIComponent(WMSG),'_blank');
 }
 function apriSMS() {
-  var n = g('f-cellulare'); if (!n) return;
-  window.open('sms:' + n + '?body=' + encodeURIComponent(WMSG), '_blank');
+  var n=g('f-cellulare'); if(!n) return;
+  window.open('sms:'+n+'?body='+encodeURIComponent(WMSG),'_blank');
 }
 
+/* ===================== CARICA ALLIEVI ===================== */
+function caricaAllievi(callback) {
+  callGAS({action:'getAllievi'}).then(function(d){
+    allievi = d.ok&&d.allievi ? d.allievi : [];
+    if(callback) callback();
+  }).catch(function(){ allievi=[]; if(callback) callback(); });
+}
+
+/* ===================== SCHEDA COMPLETA ALLIEVO ===================== */
+function schedaHTML(a, modifica) {
+  var pags = a.pagamenti||[];
+  var tv = (a.acconto||0)+pags.reduce(function(s,p){return s+(p.importo||0);},0);
+  var rim = Math.max(0,(a.totaleCoro||0)-tv);
+  var perc = a.totaleCoro>0?Math.min(100,Math.round(tv/a.totaleCoro*100)):0;
+
+  var h = '';
+
+  // SALDO IN ALTO
+  if(rim>0){
+    h += '<div class="saldo-box saldo-no"><div class="saldo-num" style="color:#e87a7a">€'+rim.toFixed(2)+'</div><div class="saldo-lbl">da pagare</div></div>';
+  } else {
+    h += '<div class="saldo-box saldo-ok"><div class="saldo-num" style="color:#6ec85a">✓ Saldato</div><div class="saldo-lbl">Totale corso: €'+(a.totaleCoro||0)+'</div></div>';
+  }
+
+  // DATI ANAGRAFICI
+  h += '<div class="card">';
+  h += '<div style="display:flex;justify-content:space-between;align-items:flex-start">';
+  h += '<div><div style="font-size:18px;font-weight:700">'+a.cognome+' '+a.nome+'</div>';
+  h += '<div style="font-size:12px;color:#8a7fa0;margin-top:3px">&#128222; '+(a.cellulare||'')+'</div>';
+  h += '<div style="font-size:12px;color:#8a7fa0;margin-top:2px">Iscritto il '+(a.data||'')+'</div></div>';
+  h += '<div style="text-align:right">'+(a.turnista?'<div style="font-size:12px;color:#c8a84b;font-weight:600;margin-bottom:4px">Turnista</div>':'')+'</div>';
+  h += '</div></div>';
+
+  // CORSI
+  h += '<div class="stitle">Corsi frequentati</div>';
+  (a.corsi||[]).forEach(function(x){
+    h += '<div class="corso-row">';
+    h += '<div><div class="corso-info"><span class="badge b-'+(x.nome||'').toLowerCase()+'">'+(x.nome||x)+'</span> '+( x.livello||'')+'</div>';
+    h += '<div class="corso-sede">&#128205; '+(a.sede||'')+'</div></div>';
+    h += '</div>';
+  });
+
+  // RIEPILOGO PAGAMENTI
+  h += '<div class="stitle" style="margin-top:10px">Riepilogo pagamenti</div>';
+  h += '<div class="card">';
+  h += '<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:#8a7fa0">Totale corso</span><span style="font-size:15px;font-weight:600">€'+(a.totaleCoro||0)+'</span></div>';
+  h += '<div class="pbar" style="margin-bottom:10px"><div class="pfill" style="width:'+perc+'%"></div></div>';
+
+  if(a.acconto>0){
+    h += '<div class="pgrow"><div><div style="font-size:13px;font-weight:500">Acconto iscrizione</div><div class="pgdt">'+(a.data||'')+'</div></div><div class="pgamt">€'+a.acconto+'</div></div>';
+  }
+  pags.forEach(function(p,i){
+    h += '<div class="pgrow"><div><div style="font-size:13px;font-weight:500">Pagamento '+(i+1)+'</div><div class="pgdt">'+p.data+'</div></div><div class="pgamt">€'+p.importo+'</div></div>';
+  });
+
+  h += '<div style="display:flex;justify-content:space-between;margin-top:8px;padding-top:8px;border-top:1px solid #2a1f4a">';
+  h += '<span style="font-size:13px;color:#8a7fa0">Totale versato</span><span style="font-size:16px;font-weight:700;color:#6ec85a">€'+tv.toFixed(2)+'</span></div>';
+  if(rim>0){
+    h += '<div style="display:flex;justify-content:space-between;margin-top:4px"><span style="font-size:13px;color:#8a7fa0">Rimanente</span><span style="font-size:16px;font-weight:700;color:#e87a7a">€'+rim.toFixed(2)+'</span></div>';
+  }
+  h += '</div>';
+
+  return h;
+}
+
+/* ===================== TAB PAGAMENTI ===================== */
 function renderPag() {
   var c = document.getElementById('pag-content');
-  if (selAllievo) { c.innerHTML = dettaglioHTML(selAllievo); bindPag(); return; }
-  var fil = allievi.filter(function(a) {
-    return (a.cognome + ' ' + a.nome).toLowerCase().indexOf(searchVal.toLowerCase()) >= 0;
+  if (pagAllievo) { renderPagDettaglio(); return; }
+  var fil = allievi.filter(function(a){
+    return (a.cognome+' '+a.nome).toLowerCase().indexOf(pagSearch.toLowerCase())>=0;
   });
   var h = '<div class="stitle">Cerca Allievo</div>'
-    + '<div class="sbox"><input type="text" id="inp-search" value="' + searchVal.replace(/"/g,'&quot;') + '" placeholder="Cerca per nome..."></div>';
-  if (!allievi.length) {
-    h += '<button class="btn-g" id="btn-carica" type="button">Carica allievi da Drive</button>';
-  } else if (!fil.length) {
+    +'<div class="sbox"><input type="text" id="pag-search" value="'+pagSearch.replace(/"/g,'&quot;')+'" placeholder="Cerca per nome..."></div>';
+  if(!allievi.length){
+    h += '<button class="btn-g" id="btn-carica-pag" type="button">Carica allievi da Drive</button>';
+  } else if(!fil.length){
     h += '<div class="empty">Nessun allievo trovato</div>';
   } else {
-    fil.forEach(function(a, i) {
-      var tv = ((a.acconto||0) + (a.pagamenti||[]).reduce(function(s,p){return s+(p.importo||0);},0)).toFixed(0);
-      h += '<button class="acard" id="ac-' + i + '" type="button">'
-        + '<div class="aname">' + a.cognome + ' ' + a.nome + '</div>'
-        + '<div style="margin-top:4px"><span class="badge b-sede">' + (a.sede||'') + '</span>'
-        + (a.corsi||[]).map(function(x){return '<span class="badge b-'+(x.nome||'').toLowerCase()+'">'+(x.nome||x)+' '+(x.livello||'')+'</span>';}).join('') + '</div>'
-        + '<div style="margin-top:5px;font-size:12px;color:#8a7fa0">Totale: €' + (a.totaleCoro||0) + ' · Versato: €' + tv + '</div>'
-        + '</button>';
+    fil.forEach(function(a,i){
+      var tv=((a.acconto||0)+(a.pagamenti||[]).reduce(function(s,p){return s+(p.importo||0);},0)).toFixed(0);
+      var rim=Math.max(0,(a.totaleCoro||0)-parseFloat(tv));
+      h += '<button class="acard" id="pac-'+i+'" type="button">'
+        +'<div class="aname">'+a.cognome+' '+a.nome+'</div>'
+        +'<div style="margin-top:4px"><span class="badge b-sede">'+(a.sede||'')+'</span>'
+        +(a.corsi||[]).map(function(x){return '<span class="badge b-'+(x.nome||'').toLowerCase()+'">'+(x.nome||x)+' '+(x.livello||'')+'</span>';}).join('')+'</div>'
+        +'<div style="margin-top:5px;font-size:12px;color:'+(rim>0?'#e87a7a':'#6ec85a')+'">Rimanente: €'+rim.toFixed(0)+'</div>'
+        +'</button>';
     });
   }
   c.innerHTML = h;
-  var si = document.getElementById('inp-search');
-  if (si) si.addEventListener('input', function() { searchVal = si.value; renderPag(); });
-  var bc = document.getElementById('btn-carica');
-  if (bc) bc.addEventListener('click', function() { caricaAllievi(); });
-  fil.forEach(function(a, i) {
-    var card = document.getElementById('ac-' + i);
-    if (card) card.addEventListener('click', (function(allievo) {
-      return function() {
-        selAllievo = allievo;
-        nuovoPagData = new Date().toISOString().split('T')[0];
-        renderPag();
-      };
-    })(a));
+  var si = document.getElementById('pag-search');
+  if(si) si.addEventListener('input', function(){ pagSearch=si.value; renderPag(); });
+  var bc = document.getElementById('btn-carica-pag');
+  if(bc) bc.addEventListener('click', function(){
+    bc.disabled=true; bc.innerHTML='<span class="spin"></span>Caricamento...';
+    caricaAllievi(function(){ renderPag(); });
+  });
+  fil.forEach(function(a,i){
+    var card=document.getElementById('pac-'+i);
+    if(card) card.addEventListener('click', (function(allievo){ return function(){
+      pagAllievo=allievo;
+      nuovoPagData=new Date().toISOString().split('T')[0];
+      renderPagDettaglio();
+    };})(a));
   });
 }
 
-function bindPag() {
-  var bb = document.getElementById('btn-back');
-  if (bb) bb.addEventListener('click', function() { selAllievo = null; renderPag(); });
-  var bp = document.getElementById('btn-pag');
-  if (bp) bp.addEventListener('click', function() { aggiungiPag(); });
-  var pd = document.getElementById('pag-data');
-  if (pd) pd.addEventListener('change', function() { nuovoPagData = pd.value; });
-}
+function renderPagDettaglio() {
+  var c = document.getElementById('pag-content');
+  var a = pagAllievo;
+  var pags = a.pagamenti||[];
+  var h = '<button class="backbtn" id="pag-back" type="button">&#8592; Torna alla lista</button>';
+  h += schedaHTML(a, false);
 
-function dettaglioHTML(a) {
-  var pags = a.pagamenti || [];
-  var tv = (a.acconto||0) + pags.reduce(function(s,p){return s+(p.importo||0);},0);
-  var rim = Math.max(0, (a.totaleCoro||0) - tv);
-  var perc = a.totaleCoro > 0 ? Math.min(100, Math.round(tv/a.totaleCoro*100)) : 0;
-  var h = '<button class="backbtn" id="btn-back" type="button">&#8592; Torna alla lista</button>'
-    + '<div class="card">'
-    + '<div style="display:flex;justify-content:space-between;align-items:flex-start">'
-    + '<div><div style="font-size:17px;font-weight:700">' + a.cognome + ' ' + a.nome + '</div>'
-    + '<div style="font-size:12px;color:#8a7fa0;margin-top:2px">Iscritto il ' + (a.data||'') + '</div></div>'
-    + '<div style="text-align:right"><span class="badge b-sede">' + (a.sede||'') + '</span>'
-    + (a.turnista ? '<div style="font-size:11px;color:#c8a84b;margin-top:3px">Turnista</div>' : '') + '</div>'
-    + '</div><div class="divl"></div>'
-    + '<div>' + (a.corsi||[]).map(function(x){return '<span class="badge b-'+(x.nome||'').toLowerCase()+'">'+(x.nome||x)+' '+(x.livello||'')+'</span>';}).join('') + '</div>'
-    + '<div class="divl"></div>'
-    + '<div style="display:flex;justify-content:space-between"><span style="font-size:13px;color:#8a7fa0">Totale corso</span><span style="font-size:16px;font-weight:600">€' + (a.totaleCoro||0) + '</span></div>'
-    + '<div style="display:flex;justify-content:space-between;margin-top:4px"><span style="font-size:13px;color:#8a7fa0">Versato</span><span style="font-size:16px;font-weight:600;color:#6ec85a">€' + tv.toFixed(0) + '</span></div>'
-    + '<div class="pbar" style="margin-top:8px"><div class="pfill" style="width:' + perc + '%"></div></div>'
-    + '<div style="text-align:right;font-size:12px;margin-top:4px;color:' + (rim>0?'#e87a7a':'#6ec85a') + '">' + (rim>0?'Rimanente: €'+rim.toFixed(0):'✓ Saldato') + '</div></div>'
-    + '<div class="stitle">Pagamenti</div>';
-  if (a.acconto > 0) h += '<div class="pgrow"><div><div style="font-size:13px;font-weight:500">Acconto iscrizione</div><div class="pgdt">' + (a.data||'') + '</div></div><div class="pgamt">€' + a.acconto + '</div></div>';
-  pags.forEach(function(p,i) { h += '<div class="pgrow"><div><div style="font-size:13px;font-weight:500">Pagamento '+(i+1)+'</div><div class="pgdt">'+p.data+'</div></div><div class="pgamt">€'+p.importo+'</div></div>'; });
-  if (pags.length < 3) {
-    h += '<div class="card"><div class="stitle" style="margin-bottom:8px">Aggiungi pagamento</div>'
-      + '<label class="first">Data pagamento</label><input type="date" id="pag-data" value="' + nuovoPagData + '">'
-      + '<label>Importo (€)</label><input type="number" id="pag-imp" placeholder="0.00" inputmode="decimal">'
-      + '<button class="btn-g" id="btn-pag" type="button" style="margin-top:12px">Aggiungi pagamento</button>'
-      + '<div id="msg-pag" style="display:none" class="msg"></div></div>';
+  // AGGIUNGI PAGAMENTO
+  if(pags.length<3){
+    h += '<div class="stitle" style="margin-top:10px">Aggiungi pagamento</div>';
+    h += '<div class="card">';
+    h += '<label class="first">Data pagamento</label><input type="date" id="pag-data" value="'+nuovoPagData+'">';
+    h += '<label>Importo (€)</label><input type="number" id="pag-imp" placeholder="0.00" inputmode="decimal">';
+    h += '<button class="btn-g" id="btn-pag" type="button" style="margin-top:12px">Aggiungi pagamento</button>';
+    h += '<div id="msg-pag" style="display:none" class="msg"></div></div>';
   } else {
-    h += '<div style="text-align:center;padding:12px;color:#8a7fa0;font-size:13px">Massimo 3 pagamenti raggiunti</div>';
+    h += '<div style="text-align:center;padding:12px;color:#8a7fa0;font-size:13px">Massimo 3 pagamenti raggiunto</div>';
   }
-  return h + '<div style="height:30px"></div>';
+  h += '<div style="height:30px"></div>';
+  c.innerHTML = h;
+
+  document.getElementById('pag-back').addEventListener('click', function(){ pagAllievo=null; renderPag(); });
+  var pd=document.getElementById('pag-data');
+  if(pd) pd.addEventListener('change', function(){ nuovoPagData=pd.value; });
+  var bp=document.getElementById('btn-pag');
+  if(bp) bp.addEventListener('click', function(){ aggiungiPag(); });
 }
 
 function aggiungiPag() {
   var imp = document.getElementById('pag-imp') ? document.getElementById('pag-imp').value : '';
-  if (!imp || parseFloat(imp) <= 0) { showMsg('msg-pag','er','Inserisci un importo valido'); return; }
-  var btn = document.getElementById('btn-pag');
-  btn.disabled = true; btn.innerHTML = '<span class="spin"></span>Salvataggio...';
+  if(!imp||parseFloat(imp)<=0){ showMsg('msg-pag','er','Inserisci un importo valido'); return; }
+  var btn=document.getElementById('btn-pag');
+  btn.disabled=true; btn.innerHTML='<span class="spin"></span>Salvataggio...';
   callGAS({
-    action: 'aggiungiPagamento',
-    cognome: selAllievo.cognome, nome: selAllievo.nome,
-    cellulare: selAllievo.cellulare,
-    pagData: nuovoPagData, pagImporto: imp
-  }).then(function(res) {
-    if (res.ok) {
-      var pag = { data: nuovoPagData, importo: parseFloat(imp) };
-      selAllievo = Object.assign({}, selAllievo, { pagamenti: (selAllievo.pagamenti||[]).concat([pag]) });
-      var idx = allievi.findIndex(function(a){return a.cognome===selAllievo.cognome&&a.nome===selAllievo.nome;});
-      if (idx >= 0) allievi[idx] = selAllievo;
-      renderPag();
-      setTimeout(function(){showMsg('msg-pag','ok','✓ Pagamento salvato su Drive!');}, 50);
+    action:'aggiungiPagamento',
+    cognome:pagAllievo.cognome, nome:pagAllievo.nome,
+    cellulare:pagAllievo.cellulare,
+    pagData:nuovoPagData, pagImporto:imp
+  }).then(function(res){
+    if(res.ok){
+      var pag={data:nuovoPagData,importo:parseFloat(imp)};
+      pagAllievo=Object.assign({},pagAllievo,{pagamenti:(pagAllievo.pagamenti||[]).concat([pag])});
+      var idx=allievi.findIndex(function(a){return a.cognome===pagAllievo.cognome&&a.nome===pagAllievo.nome&&a.cellulare===pagAllievo.cellulare;});
+      if(idx>=0) allievi[idx]=pagAllievo;
+      renderPagDettaglio();
+      setTimeout(function(){showMsg('msg-pag','ok','✓ Pagamento salvato su Drive!');},50);
     } else {
       showMsg('msg-pag','er','Errore: '+(res.msg||'riprova'));
       btn.disabled=false; btn.innerHTML='Aggiungi pagamento';
@@ -426,15 +487,207 @@ function aggiungiPag() {
   });
 }
 
-function caricaAllievi() {
-  document.getElementById('pag-content').innerHTML = '<div style="text-align:center;padding:28px;color:#8a7fa0"><span class="spin"></span>Caricamento...</div>';
-  callGAS({ action: 'getAllievi' }).then(function(d) {
-    allievi = d.ok && d.allievi ? d.allievi : [];
-    renderPag();
-  }).catch(function() { allievi = []; renderPag(); });
+/* ===================== TAB MODIFICA ===================== */
+function renderMod() {
+  var c = document.getElementById('mod-content');
+  if(modAllievo){ renderModDettaglio(); return; }
+  var fil = allievi.filter(function(a){
+    return (a.cognome+' '+a.nome).toLowerCase().indexOf(modSearch.toLowerCase())>=0;
+  });
+  var h = '<div class="stitle">Cerca Allievo da Modificare</div>'
+    +'<div class="sbox"><input type="text" id="mod-search" value="'+modSearch.replace(/"/g,'&quot;')+'" placeholder="Cerca per nome..."></div>';
+  if(!allievi.length){
+    h += '<button class="btn-g" id="btn-carica-mod" type="button">Carica allievi da Drive</button>';
+  } else if(!fil.length){
+    h += '<div class="empty">Nessun allievo trovato</div>';
+  } else {
+    fil.forEach(function(a,i){
+      h += '<button class="acard" id="mac-'+i+'" type="button">'
+        +'<div class="aname">'+a.cognome+' '+a.nome+'</div>'
+        +'<div style="margin-top:4px"><span class="badge b-sede">'+(a.sede||'')+'</span>'
+        +(a.corsi||[]).map(function(x){return '<span class="badge b-'+(x.nome||'').toLowerCase()+'">'+(x.nome||x)+' '+(x.livello||'')+'</span>';}).join('')+'</div>'
+        +'<div style="margin-top:4px;font-size:12px;color:#8a7fa0">&#128222; '+(a.cellulare||'')+(a.turnista?' · Turnista':'')+'</div>'
+        +'</button>';
+    });
+  }
+  c.innerHTML = h;
+  var si=document.getElementById('mod-search');
+  if(si) si.addEventListener('input', function(){ modSearch=si.value; renderMod(); });
+  var bc=document.getElementById('btn-carica-mod');
+  if(bc) bc.addEventListener('click', function(){
+    bc.disabled=true; bc.innerHTML='<span class="spin"></span>Caricamento...';
+    caricaAllievi(function(){ renderMod(); });
+  });
+  fil.forEach(function(a,i){
+    var card=document.getElementById('mac-'+i);
+    if(card) card.addEventListener('click', (function(allievo){ return function(){
+      modAllievo=JSON.parse(JSON.stringify(allievo));
+      renderModDettaglio();
+    };})(a));
+  });
 }
 
-window.addEventListener('DOMContentLoaded', function() { init(); });
+function renderModDettaglio() {
+  var c = document.getElementById('mod-content');
+  var a = modAllievo;
+  var corsiChecked = {};
+  (a.corsi||[]).forEach(function(x){ corsiChecked[x.nome]={livello:x.livello}; });
+
+  var h = '<button class="backbtn" id="mod-back" type="button">&#8592; Torna alla lista</button>';
+  h += '<div class="stitle">Modifica dati allievo</div>';
+
+  // DATI ANAGRAFICI EDITABILI
+  h += '<div class="card">';
+  h += '<label class="first">Data iscrizione</label><input type="date" id="m-data" value="'+(a.data||'')+'">';
+  h += '<div class="r2"><div><label class="first">Cognome</label><input type="text" id="m-cognome" value="'+(a.cognome||'')+'" autocomplete="off"></div>';
+  h += '<div><label class="first">Nome</label><input type="text" id="m-nome" value="'+(a.nome||'')+'" autocomplete="off"></div></div>';
+  h += '<label>Numero cellulare</label><input type="tel" id="m-cellulare" value="'+(a.cellulare||'')+'">';
+  h += '</div>';
+
+  // SEDE
+  h += '<div class="card"><label class="first">Sede</label>';
+  h += '<div class="r2" style="margin-top:6px">';
+  h += '<button class="sbtn'+(a.sede==='Creazzo'?' on':'')+'" id="ms-Creazzo" type="button">Creazzo</button>';
+  h += '<button class="sbtn'+(a.sede==='Tezze'?' on':'')+'" id="ms-Tezze" type="button">Tezze</button>';
+  h += '</div></div>';
+
+  // CORSI
+  h += '<div class="card"><label class="first">Corsi e livelli</label><div id="m-corsi-wrap"></div></div>';
+
+  // TOTALE E TURNISTA
+  h += '<div class="card">';
+  h += '<div class="r2" style="margin-top:0">';
+  h += '<div><label class="first">Totale corso (&euro;)</label><input type="number" id="m-totale" value="'+(a.totaleCoro||0)+'" inputmode="decimal"></div>';
+  h += '<div><label class="first">Acconto (&euro;)</label><input type="number" id="m-acconto" value="'+(a.acconto||0)+'" inputmode="decimal"></div>';
+  h += '</div><div class="divl"></div>';
+  h += '<div class="trow"><span style="font-size:15px">Turnista</span>';
+  h += '<button class="tog'+(a.turnista?' on':'')+'" id="m-tog" type="button"><div class="tok"></div></button>';
+  h += '</div></div>';
+
+  h += '<button class="btn-g" id="btn-mod-salva" type="button">Salva modifiche su Drive</button>';
+  h += '<div id="msg-mod" style="display:none" class="msg"></div>';
+  h += '<div style="height:30px"></div>';
+
+  c.innerHTML = h;
+
+  // BIND sede modifica
+  var mSede = a.sede || '';
+  document.getElementById('ms-Creazzo').addEventListener('click', function(){
+    mSede='Creazzo';
+    document.getElementById('ms-Creazzo').className='sbtn on';
+    document.getElementById('ms-Tezze').className='sbtn';
+  });
+  document.getElementById('ms-Tezze').addEventListener('click', function(){
+    mSede='Tezze';
+    document.getElementById('ms-Creazzo').className='sbtn';
+    document.getElementById('ms-Tezze').className='sbtn on';
+  });
+
+  // TOGGLE TURNISTA modifica
+  var mTurnista = !!a.turnista;
+  document.getElementById('m-tog').addEventListener('click', function(){
+    mTurnista = !mTurnista;
+    document.getElementById('m-tog').className='tog'+(mTurnista?' on':'');
+  });
+
+  // CORSI modifica
+  buildCorsiMod(corsiChecked);
+
+  // BACK
+  document.getElementById('mod-back').addEventListener('click', function(){ modAllievo=null; renderMod(); });
+
+  // SALVA MODIFICHE
+  document.getElementById('btn-mod-salva').addEventListener('click', function(){
+    var cogNuovo = document.getElementById('m-cognome').value.trim();
+    var nomNuovo = document.getElementById('m-nome').value.trim();
+    var celNuovo = document.getElementById('m-cellulare').value.trim();
+    var datNuovo = document.getElementById('m-data').value;
+    var totNuovo = document.getElementById('m-totale').value || '0';
+    var accNuovo = document.getElementById('m-acconto').value || '0';
+    if(!cogNuovo||!nomNuovo){ showMsg('msg-mod','er','Inserisci cognome e nome'); return; }
+    if(!mSede){ showMsg('msg-mod','er','Seleziona la sede'); return; }
+    if(!Object.keys(corsiChecked).length){ showMsg('msg-mod','er','Seleziona almeno un corso'); return; }
+    var errC=null;
+    Object.keys(corsiChecked).forEach(function(c){ if(!corsiChecked[c].livello) errC='Seleziona il livello per '+c; });
+    if(errC){ showMsg('msg-mod','er',errC); return; }
+    var corsiArr=Object.keys(corsiChecked).map(function(c){return {nome:c,livello:corsiChecked[c].livello};});
+    var btn=document.getElementById('btn-mod-salva');
+    btn.disabled=true; btn.innerHTML='<span class="spin"></span>Salvataggio...';
+    callGAS({
+      action:'modificaAllievo',
+      cognomeOld:a.cognome, nomeOld:a.nome, cellulareOld:a.cellulare,
+      data:datNuovo, cognome:cogNuovo, nome:nomNuovo, cellulare:celNuovo,
+      sede:mSede, turnista:String(mTurnista),
+      totaleCoro:totNuovo, acconto:accNuovo,
+      corsi:JSON.stringify(corsiArr)
+    }).then(function(res){
+      if(res.ok){
+        showMsg('msg-mod','ok','✓ Modifiche salvate su Drive!');
+        // aggiorna locale
+        var updated=Object.assign({},modAllievo,{
+          data:datNuovo,cognome:cogNuovo,nome:nomNuovo,cellulare:celNuovo,
+          sede:mSede,turnista:mTurnista,
+          totaleCoro:parseFloat(totNuovo)||0,acconto:parseFloat(accNuovo)||0,
+          corsi:corsiArr
+        });
+        var idx=allievi.findIndex(function(x){return x.cognome===a.cognome&&x.nome===a.nome&&x.cellulare===a.cellulare;});
+        if(idx>=0) allievi[idx]=updated;
+        modAllievo=updated;
+      } else { showMsg('msg-mod','er','Errore: '+(res.msg||'riprova')); }
+      btn.disabled=false; btn.innerHTML='Salva modifiche su Drive';
+    }).catch(function(){
+      showMsg('msg-mod','er','Errore di connessione. Riprova.');
+      btn.disabled=false; btn.innerHTML='Salva modifiche su Drive';
+    });
+  });
+
+  function buildCorsiMod(corsiChecked) {
+    var w=document.getElementById('m-corsi-wrap');
+    if(!w) return;
+    w.innerHTML='';
+    CORSI.forEach(function(c){
+      var sel=!!corsiChecked[c];
+      var lv=corsiChecked[c]?corsiChecked[c].livello:'';
+      var blk=document.createElement('div');
+      blk.className='cblock';
+      var head=document.createElement('button');
+      head.type='button';
+      head.className='chead';
+      head.innerHTML='<span class="cname">'+c+'</span><div class="cbox'+(sel?' on':'')+'" id="mcbox-'+c+'">'+(sel?'✓':'')+'</div>';
+      head.addEventListener('click',(function(corso){return function(){
+        if(corsiChecked[corso]) delete corsiChecked[corso]; else corsiChecked[corso]={livello:''};
+        var s=!!corsiChecked[corso];
+        var bx=document.getElementById('mcbox-'+corso);
+        var lv=document.getElementById('mliv-'+corso);
+        if(bx){bx.className='cbox'+(s?' on':'');bx.textContent=s?'✓':'';}
+        if(lv) lv.style.display=s?'flex':'none';
+      };})(c));
+      blk.appendChild(head);
+      var livDiv=document.createElement('div');
+      livDiv.className='livelli';
+      livDiv.id='mliv-'+c;
+      livDiv.style.display=sel?'flex':'none';
+      LIV.forEach(function(l){
+        var lb=document.createElement('button');
+        lb.type='button';
+        lb.id='mlb-'+c+'-'+l.slice(0,3);
+        lb.className='lbtn'+(lv===l?' on':'');
+        lb.textContent=l;
+        lb.addEventListener('click',(function(corso,livello){return function(){
+          if(!corsiChecked[corso]) corsiChecked[corso]={livello:''};
+          corsiChecked[corso].livello=livello;
+          LIV.forEach(function(ll){
+            var b=document.getElementById('mlb-'+corso+'-'+ll.slice(0,3));
+            if(b) b.className='lbtn'+(ll===livello?' on':'');
+          });
+        };})(c,l));
+        livDiv.appendChild(lb);
+      });
+      blk.appendChild(livDiv);
+      w.appendChild(blk);
+    });
+  }
+}
 </script>
 </body>
 </html>
